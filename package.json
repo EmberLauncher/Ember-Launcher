@@ -1,0 +1,34 @@
+{
+  "name": "ember-launcher",
+  "version": "0.7.0",
+  "description": "Dawn-style Minecraft launcher (early version)",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest"
+  },
+  "author": "Ember",
+  "build": {
+    "appId": "com.ember.launcher",
+    "productName": "Ember Launcher",
+    "files": [
+      "main.js",
+      "preload.js",
+      "hosting.js",
+      "auth.js",
+      "game.js",
+      "renderer/**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
